@@ -1,0 +1,475 @@
+/* ##############  header  ###################### */
+/* ##### Desktop##### */
+body {
+  background-color: black;
+  margin: 0;
+}
+.header {
+  position: relative;
+  /* backcground img from amc theater */
+  background-image: url("https://s3.amazonaws.com/ffe-ugc/intlportal2/bad-times-at-the-el-royale/motion-poster-preview2.gif");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  height: 90vh;
+}
+
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.7) 80%,
+    rgba(0, 0, 0, 1)
+  );
+}
+
+nav {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: flex-end;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  margin: 30px;
+}
+li a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover {
+  color: RGBA(220, 163, 91, 1);
+}
+
+/* ############################ synopsis ################################## */
+
+.story {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px 200px 100px;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 60px;
+}
+p {
+  color: white;
+  font-weight: 400;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  padding: 0 100px 0 0;
+  max-width: 1024px;
+}
+
+/* ############################ characters ################################## */
+
+.characters {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px 0px 100px;
+}
+.characters_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border: none;
+  padding-top: 50px;
+}
+
+.character {
+  position: relative;
+  background-color: black;
+  width: 300px;
+  height: 400px;
+  border: solid black;
+  border-radius: 10px;
+  text-shadow: 2px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+}
+
+.poster {
+  position: absolute;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+/* imgs from twitter  */
+.poster1 {
+  background-image: url("../img/char5.jpg");
+}
+.poster2 {
+  background-image: url("../img/char6.jpg");
+}
+.poster3 {
+  background-image: url("../img/char2.jpg");
+}
+.poster4 {
+  background-image: url("../img/char3.jpg");
+}
+.poster5 {
+  background-image: url("../img/char4.jpg");
+}
+.poster6 {
+  background-image: url("../img/char1.jpg");
+}
+
+.poster:hover {
+  animation: overlay 8s;
+}
+@keyframes overlay {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+video {
+  pointer-events: none;
+}
+
+/* ####################### footer ############################ */
+.background_img {
+  position: relative;
+  background-color: black;
+  background-image: url("../img/footer.png");
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background-size: cover;
+}
+.footer-overlay {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+}
+
+/* ####################### ABOUT ############################ */
+
+.header-about {
+  position: relative;
+  background-image: url("../img/about_header.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  height: 70vh;
+}
+
+.h1-about {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 60px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+/* ####################### Body description ############################ */
+
+.full-description {
+  display: flex;
+  padding: 100px 100px 200px 100px;
+  background-color: black;
+}
+
+.affiche {
+  background-image: url("../img/poster.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 30px 4px RGBA(235, 196, 150, 0.5);
+}
+
+table,
+th,
+td {
+}
+table {
+  margin-left: 50px;
+  margin-right: 50px;
+  border-spacing: 0;
+  max-width: 600px;
+}
+
+th {
+  color: white;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: lighter;
+  text-align: left;
+}
+td {
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+.name {
+  color: RGBA(240, 97, 30, 1);
+  width: 100px;
+}
+
+/* -- ######################## Modal ##################################  */
+
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog > .test {
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: black;
+}
+.close {
+  background: RGBA(240, 97, 30, 1);
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+  background: #00d9ff;
+}
+
+.button {
+  background-color: RGBA(240, 97, 30, 0.7);
+  text-align: center;
+  width: 200px;
+  padding: 5px 55px;
+  margin-top: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.img-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+iframe {
+  background-size: cover;
+}
+h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+  max-width: 1000px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.text {
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 1000px;
+}
+
+/* ##### Tablet##### */
+@media (max-width: 1000px) {
+  h1,
+  .h1-about {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  .story {
+    padding: 30px 50px 20px 30px;
+  }
+  .full-description {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 40px;
+  }
+  table {
+    margin-left: 20px;
+  }
+  td,
+  .name {
+    font-size: 15px;
+  }
+  .header {
+    height: 300px;
+  }
+  .header-about {
+    height: 500px;
+  }
+  p {
+    font-size: 20px;
+    padding: 0;
+  }
+  .characters {
+    padding: 30px 20px 20px 30px;
+  }
+  .characters_block {
+    padding-right: 10px;
+  }
+  .character {
+    width: 170px;
+    height: 270px;
+    margin: 0 0 10px 0;
+  }
+  .character-1,
+  .character-2,
+  .character-3,
+  .character-4,
+  .character-5,
+  .character-6 {
+    margin-left: 15px;
+  }
+
+  video {
+    width: 170px;
+    height: 270px;
+  }
+
+  li a {
+    font-size: 20px;
+  }
+  .img_button {
+    width: 80px;
+  }
+
+  .affiche {
+    width: 200px;
+    height: 300px;
+  }
+  .button {
+    width: 70px;
+  }
+}
+/* ##### Mobile##### */
+
+@media (max-width: 750px) {
+  h1,
+  .h1-about {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .story {
+    padding: 30px 20px 20px 30px;
+  }
+  .full-description {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  table {
+    padding-top: 40px;
+    margin-left: 20px;
+  }
+
+  td,
+  .name {
+    font-size: 15px;
+  }
+  .header,
+  .about_header {
+    height: 300px;
+  }
+  p {
+    font-size: 15px;
+    padding: 0;
+  }
+  .characters {
+    padding: 30px 20px 20px 30px;
+  }
+  .character {
+    width: 80px;
+    height: 180px;
+    margin: 0 0 10px 0;
+  }
+  .character-1,
+  .character-2,
+  .character-3,
+  .character-4,
+  .character-5,
+  .character-6 {
+    margin-left: 15px;
+  }
+
+  video {
+    width: 80px;
+    height: 180px;
+  }
+
+  li a {
+    font-size: 15px;
+  }
+  .img_button {
+    width: 80px;
+  }
+
+  .affiche {
+    width: 150px;
+    height: 250px;
+  }
+  .button {
+    width: 50px;
+  }
+}
